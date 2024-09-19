@@ -3,7 +3,7 @@ import cors from "cors";
 import mongoose from "mongoose";
 import morgan from "morgan";
 import dotenv from "dotenv";
-import authRouter from "./routes/authRouter.js";
+import eventRouter from "./routes/eventRouter.js";
 
 
 dotenv.config();
@@ -15,7 +15,7 @@ app.use(morgan("tiny"));
 app.use(cors());
 app.use(express.json());
 
-app.use("/api/event", authRouter);
+app.use("/api", eventRouter);
 
 
 
