@@ -1,6 +1,9 @@
 import Event from "../models/Event.js";
 
-const findEvents = () => Event.find();
-
-
-export default { findEvents };
+const findEvents = async () => {
+    const events = await Event.find();
+    return events;
+  };
+  
+  export default { findEvents };
+  
